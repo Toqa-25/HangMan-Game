@@ -100,6 +100,7 @@ nextBuuton.onclick = load;
 tryBuuton.onclick = load;
 
 function final() {   
+    // solutionContentSpans.map(span => {    
         if (correctLetters == randomWord.length) {
             setTimeout( function(){
                 resultDiv.classList.add("show-flex");
@@ -107,6 +108,7 @@ function final() {
             }, 200)
           console.log("empty");
         }
+    // })
 }
 function tries() {   
     if (hangManLast.classList.contains("show-block")) {

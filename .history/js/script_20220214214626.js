@@ -63,7 +63,7 @@ let solutionContentSpans = Array.from(document.querySelectorAll(".solution-conte
 lettersArray.map(letter => {
     keyBoard.innerHTML += `<span class="key-letter">${letter}</span>`;
 })
-let correctLetters = 0,
+let indexo = 0,
     countn=0
 
 // step => get letter from keybord
@@ -77,9 +77,11 @@ if (lastSolutionContentSpan.innerHTML == ""){
             if (randomWordArray.includes(chracter)) {                 
                 randomWordArray.map((letter, index) => {
                   if (letter === chracter) {
+                      solutionEmptySpans[index].classList.remove("empty");
                       solutionContentSpans[index].innerHTML = chracter;
-                 correctLetters++
-                 console.log(correctLetters);
+                         solutionEmptySpans.splice(index , 1)
+                      console.log(solutionEmptySpans);
+                      console.log(index);
                       final();
                       success(); 
                 }
@@ -100,13 +102,16 @@ nextBuuton.onclick = load;
 tryBuuton.onclick = load;
 
 function final() {   
-        if (correctLetters == randomWord.length) {
-            setTimeout( function(){
-                resultDiv.classList.add("show-flex");
-                resultWinDiv.classList.add("show-flex");
-            }, 200)
+    // solutionContentSpans.map(span => {
+        
+        if (solutionEmptySpans.length == 0 ) {
+          //   setTimeout( function(){
+          //       resultDiv.classList.add("show-flex");
+          //       resultWinDiv.classList.add("show-flex");
+          //   }, 200)
           console.log("empty");
         }
+    // })
 }
 function tries() {   
     if (hangManLast.classList.contains("show-block")) {

@@ -55,7 +55,7 @@ randomWordArray.map(letter => {
     solutionContent.innerHTML += `<span class="word-letter empty"></span>`;
 })
 let solutionContentSpans = Array.from(document.querySelectorAll(".solution-content span ")),
-    solutionEmptySpans = Array.from(document.querySelectorAll(".empty")),
+ solutionEmptySpans = Array.from(document.querySelectorAll(".empty ")),
     lastSolutionContentSpan=(solutionContentSpans[(solutionContentSpans.length)-1])
 
 
@@ -63,7 +63,7 @@ let solutionContentSpans = Array.from(document.querySelectorAll(".solution-conte
 lettersArray.map(letter => {
     keyBoard.innerHTML += `<span class="key-letter">${letter}</span>`;
 })
-let correctLetters = 0,
+let indexo = 0,
     countn=0
 
 // step => get letter from keybord
@@ -77,9 +77,10 @@ if (lastSolutionContentSpan.innerHTML == ""){
             if (randomWordArray.includes(chracter)) {                 
                 randomWordArray.map((letter, index) => {
                   if (letter === chracter) {
+                      solutionContentSpans[index].classList.remove("empty");
                       solutionContentSpans[index].innerHTML = chracter;
-                 correctLetters++
-                 console.log(correctLetters);
+                      console.log(solutionEmptySpans);
+                      console.log(index);
                       final();
                       success(); 
                 }
@@ -100,13 +101,16 @@ nextBuuton.onclick = load;
 tryBuuton.onclick = load;
 
 function final() {   
-        if (correctLetters == randomWord.length) {
-            setTimeout( function(){
-                resultDiv.classList.add("show-flex");
-                resultWinDiv.classList.add("show-flex");
-            }, 200)
-          console.log("empty");
+    // solutionContentSpans.map(span => {
+        
+        if ( solutionEmptySpans == []) {
+        //   setTimeout( function(){
+        //       resultDiv.classList.add("show-flex");
+        //       resultWinDiv.classList.add("show-flex");
+        //   }, 200)
+        console.log("empty")
         }
+    // })
 }
 function tries() {   
     if (hangManLast.classList.contains("show-block")) {

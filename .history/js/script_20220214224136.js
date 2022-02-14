@@ -107,6 +107,7 @@ function final() {
             }, 200)
           console.log("empty");
         }
+    // })
 }
 function tries() {   
     if (hangManLast.classList.contains("show-block")) {

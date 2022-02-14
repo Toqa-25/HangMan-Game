@@ -79,7 +79,6 @@ if (lastSolutionContentSpan.innerHTML == ""){
                   if (letter === chracter) {
                       solutionContentSpans[index].innerHTML = chracter;
                  correctLetters++
-                 console.log(correctLetters);
                       final();
                       success(); 
                 }
@@ -100,13 +99,16 @@ nextBuuton.onclick = load;
 tryBuuton.onclick = load;
 
 function final() {   
-        if (correctLetters == randomWord.length) {
-            setTimeout( function(){
-                resultDiv.classList.add("show-flex");
-                resultWinDiv.classList.add("show-flex");
-            }, 200)
+    // solutionContentSpans.map(span => {
+        
+        if (correctLetters == ) {
+          //   setTimeout( function(){
+          //       resultDiv.classList.add("show-flex");
+          //       resultWinDiv.classList.add("show-flex");
+          //   }, 200)
           console.log("empty");
         }
+    // })
 }
 function tries() {   
     if (hangManLast.classList.contains("show-block")) {
