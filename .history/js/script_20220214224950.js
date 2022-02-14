@@ -37,7 +37,7 @@ let wordsKey = Object.keys(words),
     randomSectionvalue = words[randomSectionKey],
     randomIndexForWord = Math.floor(Math.random() * randomSectionvalue.length),
     randomWord = randomSectionvalue[randomIndexForWord].toUpperCase();
-// console.log(randomWord);
+console.log(randomWord);
 
 
 
