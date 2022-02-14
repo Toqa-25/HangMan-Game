@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- css fils -->
+     <link rel="stylesheet" href="css/normalize.css">
+     <link rel="stylesheet" href="css/all.min.css">
+     <link rel="stylesheet" href="css/style.css">
+     <!-- google fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Pushster&amp;display=swap" rel="stylesheet">
+     <!-- page title -->
+    <title>HangMan</title>
+</head>
+<body>
+    <section class="hangman container">
+        <div class="header">
+            <h2 class="game-name">HangMan</h2>
+            <h2 class="word-section">word section : <span class="section-name"></span></h2>
+        </div>
+        <div class="game">
+            <div class="game-drow">
+                <div class="game-drow-content">
+                    <div class="vertical-stand false-try"></div>
+                    <div class="horizontal-stand false-try"></div>
+                    <div class="vertical-rope false-try"></div>
+                    <div class="circle-rope false-try"></div>
+                    <div class="game-drow-man">
+                        <div class="man-head false-try"></div>
+                        <div class="man-body false-try"></div>
+                        <div class="man-hand false-try"></div>
+                        <div class="man-leg false-try"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="game-keyboard"></div>
+        </div>
+        <div class="solution">
+            <div class="solution-content"></div>
+        </div>
+        <div class="result">
+            <div class="result-win">
+                <h1 class="win-msg">congratulations</h1>
+                <i class="fas fa-trophy fa-4x"></i>
+                <button class="next">next</button>
+            </div>
+            <div class="result-loser">
+                 <h1 class="loser-msg">game over</h1>
+                <button class="try">try again</button>
+            </div>
+        </div>
+    </section>
+    <!--  copyRight style  -->
+    <div class="bottom-group">
+             <p>made with <i class="fas fa-heart"></i> by <a class="developer link-none" href="https://toqa-25.github.io/portfolio/">toqa</a></p>
+    </div>
+      <audio id="success" src="sounds/success-sound-effect.mp3"   preload="auto" type="audio/ogg" id="success"></audio>
+      <audio id="lose" src="sounds/game-lose-sound-effect.mp3"   preload="auto" type="audio/ogg" id="success"></audio>
+    <script src="js/script.js"></script>
+</body>
+</html>
