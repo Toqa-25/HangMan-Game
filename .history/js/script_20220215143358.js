@@ -103,7 +103,7 @@ tryBuuton.onclick = load;
 function final() {   
         if (correctLetters == randomWord.length) {
             setTimeout( function(){
-                resultDiv.classList.add("show-block");
+                resultDiv.classList.add("show-flex");
                 resultWinDiv.classList.add("show-flex");
             }, 200)
           console.log("empty");
@@ -115,7 +115,7 @@ function tries() {
              document.querySelector(
                ".loser-msg"
              ).innerHTML = `game over <br> the word is ${randomWord}`;
-          resultDiv.classList.add("show-block");
+          resultDiv.classList.add("show-flex");
         resultLoserDiv.classList.add("show-flex");
          }, 100);
     }

@@ -19,7 +19,7 @@ let hangMan = Array.from(document.querySelectorAll(".false-try")),
 
 // result var 
 let resultDiv = document.querySelector(".result"),
-  resultContent = document.querySelector(".result-content"),
+  resultContent = document.querySelector(".result-win"),
   resultWinDiv = document.querySelector(".result-win"),
   resultLoserDiv = document.querySelector(".result-loser"),
   manLeg = document.querySelector(".man-leg ");
@@ -103,7 +103,7 @@ tryBuuton.onclick = load;
 function final() {   
         if (correctLetters == randomWord.length) {
             setTimeout( function(){
-                resultDiv.classList.add("show-block");
+                resultDiv.classList.add("show-flex");
                 resultWinDiv.classList.add("show-flex");
             }, 200)
           console.log("empty");
@@ -115,7 +115,7 @@ function tries() {
              document.querySelector(
                ".loser-msg"
              ).innerHTML = `game over <br> the word is ${randomWord}`;
-          resultDiv.classList.add("show-block");
+          resultDiv.classList.add("show-flex");
         resultLoserDiv.classList.add("show-flex");
          }, 100);
     }

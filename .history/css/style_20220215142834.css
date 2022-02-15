@@ -244,16 +244,16 @@ section{
 }
 .result {
     width: 100%;
-    height: 160%;
+    height: 200vh;
     position: absolute;
     top: 0;
     left: 0;
     background-color: #2f5019bf;
     color: #fff;
-    font-size: 30px;
+    /* font-size: 30px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     display: none;
 }
 .result-content{
@@ -262,7 +262,7 @@ section{
     position: absolute;
     top: 0;
     left: 0;
-    /* background-color: #2f5019bf; */
+    background-color: #2f5019bf;
     color: #fff;
     font-size: 30px;
     display: flex;

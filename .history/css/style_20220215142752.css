@@ -244,7 +244,21 @@ section{
 }
 .result {
     width: 100%;
-    height: 160%;
+    height: 200vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #2f5019bf;
+    color: #fff;
+    /* font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    display: none;
+}
+.result-content{
+    width: 100%;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -255,20 +269,6 @@ section{
     justify-content: center;
     align-items: center;
     display: none;
-}
-.result-content{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* background-color: #2f5019bf; */
-    color: #fff;
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* display: none; */
 }
 .result-win ,.result-loser {
     display: flex;
