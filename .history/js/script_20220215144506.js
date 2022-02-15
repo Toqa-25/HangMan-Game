@@ -132,5 +132,5 @@ function lose() {
     document.getElementById("lose").play()
 }
 
-// console.log("zain")
-// console.log(solutionContentSpans);
+console.log("zain")
+console.log(solutionContentSpans);
