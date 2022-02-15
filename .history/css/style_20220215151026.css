@@ -40,7 +40,7 @@ section{
 }
 @media (min-width:992px){
     section{
-        height: calc(100vh - 90px );
+        /* height: calc(100vh - 90px ); */
 }
 }
 .header {
@@ -314,7 +314,7 @@ section{
 .bottom-group{
 color:var(--main-color);
 text-align: center;
-margin: 20px auto;
+margin: 16px auto;
 }
 .bottom-group p{ 
     text-transform:capitalize;
